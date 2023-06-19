@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>home</title>
+  </head>
+  <script>
+    localStorage.setItem('nomeUsuario', '<%= ola %>');
+  </script>
+  <body class="w-full h-screen container bg-fuchsia-100">
+    <div class="grid gap-10 sm:grid-cols-1 md:grid-cols-2">
+      <img class="m-auto w-4/5" src="https://http.cat/100" alt="" />
+      <div class="text-center m-4">
+        <h1 class="m-6 text-3xl text-center font-bold underline">
+          Quem somos?
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+          dolorum maiores, dolor maxime vero facilis placeat harum, numquam
+          corrupti consectetur quis ea eveniet delectus tempore quo adipisci vel
+          libero sapiente natus nihil esse! Odit distinctio laudantium
+          architecto, minus voluptatum facilis doloremque, similique repellendus
+          ratione corporis commodi, eaque beatae recusandae velit.
+        </p>
+      </div>
+    </div>
+    <h1 class="text-3xl text-center m-auto font-bold underline">
+      conheça os sabores de bolos
+    </h1>
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-4 grid-rows-3">
+      <!-- bolo -->
+      <div class="w-80 bg-pink-200 m-auto p-5 rounded-lg">
+        <h2 class="text-2xl font-semibold">bolo de morango</h2>
+
+        <img class="w-56" src="/static/bolo-morango.png" alt="" />
+      </div>
+      <div class="w-80 bg-pink-200 m-auto p-5 rounded-lg">
+        <h2 class="text-2xl font-semibold">bolo de doce de leite</h2>
+
+        <img
+          class="w-56"
+          src="https://github.com/igorrzinho/projeto-swII/raw/main/static/1-bolo-doce-de-leite.png"
+          alt=""
+        />
+      </div>
+      <div class="w-80 bg-pink-200 m-auto p-5 rounded-lg">
+        <h2 class="text-2xl font-semibold">bolo de maracuja</h2>
+
+        <img
+          class="w-56"
+          src="https://github.com/igorrzinho/projeto-swII/raw/main/static/1-bolo-maracuja.png"
+          alt=""
+        />
+      </div>
+      <div class="w-80 bg-pink-200 m-auto p-5 rounded-lg">
+        <h2 class="text-2xl font-semibold">bolo de brigadeiro</h2>
+        <img
+          class="w-56"
+          src="https://raw.githubusercontent.com/igorrzinho/projeto-swII/main/static/1-bolo-brigadeiro.png"
+          alt=""
+        />
+      </div>
+      <div class="w-80 bg-pink-200 m-auto p-5 rounded-lg">
+        <h2 class="text-2xl font-semibold">bolo de brigadeiro</h2>
+
+        <img
+          class="w-56"
+          src="https://github.com/igorrzinho/projeto-swII/raw/main/static/1-bolo-beijinho.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="bg-fuchsia-300 w-80 text-center">
+      <h2>encomende seu bolo agora mesmo</h2>
+      <form action="/" method="POST" autocomplete="off">
+        <input
+          class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
+          type="text"
+          name="nome"
+          required
+          placeholder="seu nome completo"
+        /><br />
+        <input
+          class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
+          type="text"
+          name="email"
+          required
+          placeholder="seu email"
+        /><br />
+        <input
+          class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
+          type="tel"
+          name="tel"
+          required
+          placeholder="seu telefone"
+        /><br />
+        <input
+          class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
+          type="number"
+          name="peso"
+          required
+          placeholder="peso do bolo em kg"
+        /><br />
+
+        <label for="sabor">escolha o sabor</label>
+        <select id="sabor" name="select" placeholder="sabor">
+          <option value="brigadeiro">brigadeiro</option>
+          <option value="doce-de-leite">doce de leite</option>
+          <option value="maracuja">maracuja</option>
+          <option value="morango">morango</option>
+          <option value="beijinho">beijinho</option></select
+        ><br />
+        <div>
+          <input
+            class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
+            type="date"
+            name="data"
+            required
+            placeholder="dia e horario da retirada"
+          />
+          <input
+            class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
+            type="time"
+            name="data"
+            required
+            placeholder="dia e horario da retirada"
+          />
+        </div>
+        <input
+          class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
+          type="submit"
+          value="enviar"
+        />
+      </form>
+    </div>
+  </body>
+</html>
