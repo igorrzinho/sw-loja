@@ -6,42 +6,52 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>home</title>
   </head>
-  <script>
-    localStorage.setItem('nomeUsuario', '<%= ola %>');
-  </script>
   <body class="w-full h-screen container bg-fuchsia-100">
     <div class="grid gap-10 sm:grid-cols-1 md:grid-cols-2">
-      <img class="m-auto w-4/5" src="https://http.cat/100" alt="" />
+      <img
+        class="m-auto w-4/5"
+        src="https://raw.githubusercontent.com/igorrzinho/sw-loja/main/static/Dona%20Ana.jpg"
+        alt=""
+      />
       <div class="text-center m-4">
         <h1 class="m-6 text-3xl text-center font-bold underline">
           Quem somos?
         </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-          dolorum maiores, dolor maxime vero facilis placeat harum, numquam
-          corrupti consectetur quis ea eveniet delectus tempore quo adipisci vel
-          libero sapiente natus nihil esse! Odit distinctio laudantium
-          architecto, minus voluptatum facilis doloremque, similique repellendus
-          ratione corporis commodi, eaque beatae recusandae velit.
+          Dona Ana Bolos Caseiros é uma confeitera dedicada, cuja paixão pela
+          arte de fazer bolos caseiros é evidente em cada pedaço de sabor e
+          carinho que sai de sua cozinha. Com sua marca registrada, Dona Ana
+          utiliza o arrecadamento de sua loja para fazer a diferença na vida das
+          pessoas
+        </p>
+        <p>
+          Além de oferecer deliciosos bolos feitos com ingredientes
+          selecionados, a loja Dona Ana Bolos Caseiros tem um propósito maior.
+          Com generosidade, Dona Ana utiliza parte dos lucros para levar alegria
+          e conforto às pessoas em situações difíceis. Seja distribuindo bolos
+          para pessoas em situação de rua, levando suas criações para orfanatos
+          ou apoiando ONGs, Dona Ana está sempre disposta a ajudar.
+        </p>
+        <p>
+          Ao comprar um bolo da Dona Ana Bolos Caseiros, você não apenas
+          desfruta de uma experiência gastronômica única, mas também contribui
+          para um projeto social que espalha amor e afeto. Cada mordida tem um
+          sabor especial, sabendo que você faz parte de uma causa nobre.
         </p>
       </div>
     </div>
     <h1 class="text-3xl text-center m-auto font-bold underline">
       conheça os sabores de bolos
     </h1>
-    <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-4 grid-rows-3">
+    <div class="grid lg:grid-cols-2 md:grid-cols-2 gap-4 grid-rows-2">
       <!-- bolo -->
-      <div class="w-80 bg-pink-200 m-auto p-5 rounded-lg">
-        <h2 class="text-2xl font-semibold">bolo de morango</h2>
 
-        <img class="w-56" src="/static/bolo-morango.png" alt="" />
-      </div>
       <div class="w-80 bg-pink-200 m-auto p-5 rounded-lg">
-        <h2 class="text-2xl font-semibold">bolo de doce de leite</h2>
+        <h2 class="text-2xl font-semibold">bolo de nozes</h2>
 
         <img
           class="w-56"
-          src="https://github.com/igorrzinho/projeto-swII/raw/main/static/1-bolo-doce-de-leite.png"
+          src="https://raw.githubusercontent.com/igorrzinho/sw-loja/main/static/Screenshot.png"
           alt=""
         />
       </div>
@@ -50,90 +60,167 @@
 
         <img
           class="w-56"
-          src="https://github.com/igorrzinho/projeto-swII/raw/main/static/1-bolo-maracuja.png"
+          src="https://raw.githubusercontent.com/igorrzinho/sw-loja/main/static/bolo-maracuja.png"
           alt=""
         />
       </div>
       <div class="w-80 bg-pink-200 m-auto p-5 rounded-lg">
-        <h2 class="text-2xl font-semibold">bolo de brigadeiro</h2>
+        <h2 class="text-2xl font-semibold">bolo de morango</h2>
         <img
           class="w-56"
-          src="https://raw.githubusercontent.com/igorrzinho/projeto-swII/main/static/1-bolo-brigadeiro.png"
+          src="https://raw.githubusercontent.com/igorrzinho/sw-loja/main/static/bolo-morango.png"
           alt=""
         />
       </div>
       <div class="w-80 bg-pink-200 m-auto p-5 rounded-lg">
-        <h2 class="text-2xl font-semibold">bolo de brigadeiro</h2>
+        <h2 class="text-2xl font-semibold">bolo de chocolate</h2>
 
         <img
           class="w-56"
-          src="https://github.com/igorrzinho/projeto-swII/raw/main/static/1-bolo-beijinho.png"
+          src="https://raw.githubusercontent.com/igorrzinho/sw-loja/main/static/bolo-chocolate.jpg"
           alt=""
         />
       </div>
     </div>
-    <div class="bg-fuchsia-300 w-80 text-center">
-      <h2>encomende seu bolo agora mesmo</h2>
-      <form action="/" method="POST" autocomplete="off">
-        <input
-          class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
-          type="text"
-          name="nome"
-          required
-          placeholder="seu nome completo"
-        /><br />
-        <input
-          class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
-          type="text"
-          name="email"
-          required
-          placeholder="seu email"
-        /><br />
-        <input
-          class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
-          type="tel"
-          name="tel"
-          required
-          placeholder="seu telefone"
-        /><br />
-        <input
-          class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
-          type="number"
-          name="peso"
-          required
-          placeholder="peso do bolo em kg"
-        /><br />
+    <div class="flex justify-center my-20">
+      <div class="bg-fuchsia-300 w-80 text-center rounded">
+        <form action="/" method="POST" autocomplete="off">
+          <h2 class="text-2xl font-semibold">encomende seu bolo agora</h2>
+          <input
+            class="
+              p-2.5
+              m-1
+              outline-none
+              focus:bg-fuchsia-100
+              rounded
+              bg-fuchsia-50
+              w-4/5
+            "
+            type="text"
+            name="nome"
+            required
+            placeholder="seu nome completo"
+          /><br />
+          <input
+            class="
+              p-2.5
+              m-1
+              outline-none
+              focus:bg-fuchsia-100
+              rounded
+              bg-fuchsia-50
+              w-4/5
+            "
+            type="text"
+            name="email"
+            required
+            placeholder="seu email"
+          /><br />
+          <input
+            class="
+              p-2.5
+              m-1
+              outline-none
+              focus:bg-fuchsia-100
+              rounded
+              bg-fuchsia-50
+              w-4/5
+            "
+            type="tel"
+            name="tel"
+            required
+            placeholder="seu telefone"
+          /><br />
+          <input
+            class="
+              p-2.5
+              m-1
+              outline-none
+              focus:bg-fuchsia-100
+              rounded
+              bg-fuchsia-50
+              w-4/5
+            "
+            type="number"
+            name="peso"
+            required
+            placeholder="peso do bolo em kg"
+          /><br />
+          <div class="bg-fuchsia-50 p-2.5 rounded w-4/5 m-auto my-1">
+            <fieldset class="border-2 border-black">
+              <legend>escolha o sabor:</legend>
 
-        <label for="sabor">escolha o sabor</label>
-        <select id="sabor" name="select" placeholder="sabor">
-          <option value="brigadeiro">brigadeiro</option>
-          <option value="doce-de-leite">doce de leite</option>
-          <option value="maracuja">maracuja</option>
-          <option value="morango">morango</option>
-          <option value="beijinho">beijinho</option></select
-        ><br />
-        <div>
+              <div>
+                <input
+                  type="radio"
+                  id="chocolate"
+                  name="sabor"
+                  value="chocolate"
+                  checked
+                />
+                <label for="chocolate">chocolate</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="morango"
+                  name="sabor"
+                  value="morango"
+                  checked
+                />
+                <label for="morango">morango</label>
+              </div>
+              <div>
+                <input type="radio" id="nozes" name="sabor" value="nozes" />
+                <label for="nozes">nozes</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="maracuja"
+                  name="sabor"
+                  value="maracuja"
+                />
+                <label for="maracuja">maracuja</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="bg-fuchsia-50 rounded w-4/5 m-auto my-1">
+            <input
+              class="
+                bg-transparent
+                m-1
+                outline-none
+                focus:bg-fuchsia-100
+                rounded
+              "
+              type="date"
+              name="data"
+              required
+              placeholder="dia e horario da retirada"
+            />
+            <input
+              class="
+                bg-transparent
+                m-1
+                outline-none
+                focus:bg-fuchsia-100
+                rounded
+              "
+              type="time"
+              name="hora"
+              required
+              placeholder="dia e horario da retirada"
+            />
+          </div>
           <input
             class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
-            type="date"
-            name="data"
-            required
-            placeholder="dia e horario da retirada"
+            type="submit"
+            value="enviar"
           />
-          <input
-            class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
-            type="time"
-            name="data"
-            required
-            placeholder="dia e horario da retirada"
-          />
-        </div>
-        <input
-          class="p-2.5 m-1 outline-none focus:bg-fuchsia-100 rounded"
-          type="submit"
-          value="enviar"
-        />
-      </form>
+        </form>
+      </div>
     </div>
   </body>
 </html>

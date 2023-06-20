@@ -20,8 +20,8 @@ app.get('/obrigada', (req, res) => {
   res.sendFile(path.resolve('views/agradecimento.html'));
 });
 app.post('/', (req, res) => {
-  const { nome } = req.body;
-  console.log(nome);
+  const { nome, email, tel, peso, sabor, data, hora } = req.body;
+  console.log(nome, email, tel, peso, sabor, data, hora);
   res.redirect('/obrigada');
 });
 
