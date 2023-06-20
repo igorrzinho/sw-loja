@@ -23,9 +23,8 @@ app.get('/obrigada', (req, res) => {
 });
 app.post('/', (req, res) => {
   const { nome, email, tel, peso, sabor, data, hora } = req.body;
-  //console.log(nome, email, tel, peso, sabor, data, hora);
   let user = 'contato_igor@yahoo.com';
-  let pass = 'qiqabbdygbrilxje';
+  let pass = '1@54i756';
   var transporter = nodemailer.createTransport({
     host: 'smtp.mail.yahoo.com',
     port: 587,
