@@ -3,6 +3,8 @@ const app = express();
 const port = 3010;
 const path = require('path');
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+
 app.use(express.static('static'));
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/static');
@@ -21,7 +23,31 @@ app.get('/obrigada', (req, res) => {
 });
 app.post('/', (req, res) => {
   const { nome, email, tel, peso, sabor, data, hora } = req.body;
-  console.log(nome, email, tel, peso, sabor, data, hora);
+  //console.log(nome, email, tel, peso, sabor, data, hora);
+  let user = 'contato_igor@yahoo.com';
+  let pass = 'qiqabbdygbrilxje';
+  var transporter = nodemailer.createTransport({
+    host: 'smtp.mail.yahoo.com',
+    port: 587,
+    service: 'Yahoo',
+    auth: { user, pass },
+  });
+
+  var mailOptions = {
+    from: user,
+    to: email,
+    subject: 'encomenda de bolo',
+    text: `ola ${nome}, você fez uma encomenda de bolo de ${sabor} e de ${peso}kg para entregar dia ${data} as ${hora}`,
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log('errado');
+      console.log(error);
+    } else {
+      console.log('email enviado: ' + info.response);
+    }
+  });
   res.redirect('/obrigada');
 });
 
